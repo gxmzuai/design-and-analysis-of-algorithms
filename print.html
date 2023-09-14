@@ -1,0 +1,311 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>算法设计与分析学习笔记</title>
+        <meta name="robots" content="noindex" />
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="230914.html"><strong aria-hidden="true">1.</strong> 基础知识</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">算法设计与分析学习笔记</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p>一、课程主要内容</p>
+<p><img src="https://vip2.loli.io/2023/09/14/UcAebSnJOHPa8RW.webp" alt="" /></p>
+<p>二、本节课的主要内容</p>
+<p><img src="https://vip2.loli.io/2023/09/14/2UX4wuavthDNZCH.webp" alt="" /></p>
+<p>三、算法设计的要点</p>
+<p><img src="https://vip2.loli.io/2023/09/14/pZVkQmdsGRbl4qH.webp" alt="" /></p>
+<p>四、本节课涉及的问题</p>
+<ul>
+<li>
+<p>货郎问题</p>
+</li>
+<li>
+<p>0-1背包问题</p>
+</li>
+<li>
+<p>双机调度问题</p>
+</li>
+<li>
+<p>NP-hard问题</p>
+</li>
+</ul>
+<p><img src="https://vip2.loli.io/2023/09/14/KvhwMZWxic8rBNl.webp" alt="" /></p>
+<ul>
+<li>.......</li>
+</ul>
+<p>五、货郎问题</p>
+<p>注：课后作业要用到。</p>
+<p><img src="https://vip2.loli.io/2023/09/14/6OYavZ2cfAJVETF.webp" alt="" /></p>
+<p><img src="https://vip2.loli.io/2023/09/14/Hr5cKaY2N8kLxUl.webp" alt="" /></p>
+<p>六：算法的两种时间复杂度</p>
+<p>最坏时间复杂度和平均时间复杂度。</p>
+<p><img src="https://vip2.loli.io/2023/09/14/ncWLdkXtU2B7g3I.webp" alt="" /></p>
+<p>七、算法的伪代码描述</p>
+<p><img src="https://vip2.loli.io/2023/09/14/f9LVUwrFC5PAgRN.webp" alt="" /></p>
+<p>八、函数的渐近的界</p>
+<ul>
+<li>大O符号（描述一个函数的“上界”）</li>
+</ul>
+<p><img src="https://vip2.loli.io/2023/09/14/Vck1Ew9dWMo8U7K.webp" alt="" /></p>
+<p><img src="https://vip2.loli.io/2023/09/14/6ro94VvIYeNq5ab.webp" alt="" /></p>
+<ul>
+<li>Ω符号（描述一个函数的“下界”）</li>
+</ul>
+<p><img src="https://vip2.loli.io/2023/09/14/9kjuNTpUiwW3AsQ.webp" alt="" /></p>
+<p><img src="https://vip2.loli.io/2023/09/14/DvLnB1jXyYFoZu4.webp" alt="" /></p>
+<ul>
+<li>小o符号（描述一个更“严格”的上界）</li>
+</ul>
+<p><img src="https://vip2.loli.io/2023/09/14/DyjFRrNfZsVnGci.webp" alt="" /></p>
+<p><img src="https://vip2.loli.io/2023/09/14/oq7ydfetbZ2pa5L.webp" alt="" /></p>
+<ul>
+<li>小Ω符号（描述一个更“严格”的下界）</li>
+</ul>
+<p><img src="https://vip2.loli.io/2023/09/14/3kuDgz8F1PWCISn.webp" alt="" /></p>
+<p>课后作业</p>
+<p>用python或java简单实现货郎问题(TSP,Traveling Salesman Problem)。</p>
+<pre><code class="language-python"># 导入必要的库
+import itertools  # 用于生成排列组合
+import math  # 用于数学运算
+
+# 定义计算两点之间距离的函数
+def distance(point1, point2):
+    return math.sqrt((point1[0] - point2[0])**2 + (point1[1] - point2[1])**2)
+
+# 定义暴力解决货郎问题的函数
+def tsp_bruteforce(points):
+    n = len(points)  # 获取点（城市）的数量
+    min_distance = float('inf')  # 初始化最短距离为无穷大
+    best_path = None  # 初始化最佳路径为 None
+
+    # 遍历所有可能的路径（排列）
+    for path in itertools.permutations(range(n)):
+        current_distance = 0  # 初始化当前路径的距离为 0
+
+        # 计算当前路径的总距离
+        for i in range(n - 1):
+            current_distance += distance(points[path[i]], points[path[i + 1]])
+
+        # 加上返回到起始点的距离
+        current_distance += distance(points[path[-1]], points[path[0]])
+
+        # 更新最短距离和最佳路径
+        if current_distance &lt; min_distance:
+            min_distance = current_distance
+            best_path = path
+
+    return best_path, min_distance
+
+# 定义一些点（x, y）来表示城市
+points = [(0, 0), (1, 2), (2, 4), (3, 1), (4, 3)]
+
+# 调用函数并获取结果
+best_path, min_distance = tsp_bruteforce(points)
+best_path, min_distance
+</code></pre>
+<p><img src="https://vip2.loli.io/2023/09/14/zOurbSoMIapTNwR.webp" alt="" /></p>
+<p><img src="https://vip2.loli.io/2023/09/14/4jUJ1REFGVXwDiz.webp" alt="" /></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </div>
+    </body>
+</html>
