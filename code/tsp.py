@@ -1,38 +1,45 @@
-# 导入必要的库
-import itertools  # 用于生成排列组合
-import math  # 用于数学运算
+from itertools import permutations  # 导入排列函数
 
-# 定义计算两点之间距离的函数
-def distance(point1, point2):
-    return math.sqrt((point1[0] - point2[0])**2 + (point1[1] - point2[1])**2)
+# 定义城市和它们之间的距离
+cities = ["c1", "c2", "c3", "c4"]
+distances = {
+    ("c1", "c2"): 10,
+    ("c1", "c3"): 5,
+    ("c1", "c4"): 9,
+    ("c2", "c3"): 6,
+    ("c2", "c4"): 9,
+    ("c3", "c4"): 3,
+}
 
-# 定义暴力解决货郎问题的函数
-def tsp_bruteforce(points):
-    n = len(points)  # 获取点（城市）的数量
-    min_distance = float('inf')  # 初始化最短距离为无穷大
-    best_path = None  # 初始化最佳路径为 None
 
-    # 遍历所有可能的路径（排列）
-    for path in itertools.permutations(range(n)):
-        current_distance = 0  # 初始化当前路径的距离为 0
+# 函数：计算给定路径的总距离
+def calculate_distance(path, distances):
+    total_distance = 0  # 初始化总距离为0
+    for i in range(len(path) - 1):  # 遍历路径中的每一对相邻城市
+        # 使用get方法从字典中提取城市对的距离，如果没有则尝试反向城市对
+        total_distance += distances.get(
+            (path[i], path[i + 1]), distances.get((path[i + 1], path[i]), 0)
+        )
+    return total_distance  # 返回总距离
 
-        # 计算当前路径的总距离
-        for i in range(n - 1):
-            current_distance += distance(points[path[i]], points[path[i + 1]])
 
-        # 加上返回到起始点的距离
-        current_distance += distance(points[path[-1]], points[path[0]])
+# 生成所有可能的路径（排列）
+all_paths = list(permutations(cities))
 
-        # 更新最短距离和最佳路径
-        if current_distance < min_distance:
-            min_distance = current_distance
-            best_path = path
+# print(all_paths)
+# print(len(all_paths))
 
-    return best_path, min_distance
+# 寻找具有最小距离的路径
+min_distance = float("inf")  # 初始化最小距离为无穷大
+min_path = None  # 初始化最短路径为None
 
-# 定义一些点（x, y）来表示城市
-points = [(0, 0), (1, 2), (2, 4), (3, 1), (4, 3)]
+# 遍历所有可能的路径
+for path in all_paths:
+    path_with_return = path + (path[0],)  # 在路径末尾添加起始城市，形成一个回路
+    distance = calculate_distance(path_with_return, distances)  # 计算回路的总距离
+    if distance < min_distance:  # 如果找到更短的路径，则更新最小距离和最短路径
+        min_distance = distance
+        min_path = path_with_return
 
-# 调用函数并获取结果
-best_path, min_distance = tsp_bruteforce(points)
-print(best_path, min_distance)
+# 输出最短路径和其总距离
+print(min_path, min_distance)
