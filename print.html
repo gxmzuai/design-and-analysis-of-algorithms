@@ -84,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="230914.html"><strong aria-hidden="true">1.</strong> 基础知识1</a></li><li class="chapter-item expanded "><a href="230921.html"><strong aria-hidden="true">2.</strong> 基础知识2</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="230914.html"><strong aria-hidden="true">1.</strong> 基础知识1</a></li><li class="chapter-item expanded "><a href="230921.html"><strong aria-hidden="true">2.</strong> 基础知识2</a></li><li class="chapter-item expanded "><a href="230928.html"><strong aria-hidden="true">3.</strong> 国庆假期作业</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -302,6 +302,96 @@ print(min_path, min_distance)
 <p><img src="https://vip2.loli.io/2023/09/21/nxW4YFbyPOcJtgh.webp" alt="" /></p>
 <p>十五、二分检索平均时间复杂度</p>
 <p><img src="https://vip2.loli.io/2023/09/21/AjTB7aZVkho8F4O.webp" alt="" /></p>
+<div style="break-before: page; page-break-before: always;"></div><p>一、国庆作业</p>
+<p><img src="https://vip2.loli.io/2023/09/28/b5Siso7FH6AQxlc.webp" alt="" /></p>
+<p>汉诺塔（港台：河内塔）（Tower of Hanoi）是根据一个传说形成的数学问题：</p>
+<p>有三根杆子A，B，C。A杆上有 N 个 (N&gt;1) 穿孔圆盘，盘的尺寸由下到上依次变小。要求按下列规则将所有圆盘移至 C 杆：</p>
+<p>每次只能移动一个圆盘；大盘不能叠在小盘上面。</p>
+<p>解题思路：</p>
+<p><img src="https://vip2.loli.io/2023/09/28/UoYbuMF8wZHfdkp.webp" alt="" /></p>
+<ul>
+<li><a href="https://www.bilibili.com/video/BV1SP4y137E9">via</a></li>
+</ul>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+// 汉诺塔递归函数
+void hanoi(int n, char A, char B, char C) {
+    // 当只有一个盘子时，直接从 A 移动到 C
+    if (n == 1) {
+        printf(&quot;Move disk 1 from %c to %c\n&quot;, A, C);
+        return;
+    }
+    // 先将 n-1 个盘子从 A 移动到 B，以 C 作为中间塔
+    hanoi(n-1, A, C, B);
+    // 移动第 n 个盘子从 A 到 C
+    printf(&quot;Move disk %d from %c to %c\n&quot;, n, A, C);
+    // 最后将 n-1 个盘子从 B 移动到 C，以 A 作为中间塔
+    hanoi(n-1, B, A, C);
+}
+
+int main() {
+    // 初始化盘子数量为 3
+    int n = 3;
+    // 输出汉诺塔移动步骤
+    printf(&quot;Hanoi Tower moves:\n&quot;);
+    // 调用 hanoi 函数进行汉诺塔问题求解
+    hanoi(n, 'A', 'B', 'C');
+    return 0;
+}
+</code></pre>
+<p>汉诺塔问题时间复杂度的分析：</p>
+<p><img src="https://vip2.loli.io/2023/09/28/qTXpKn4jQZy7fBM.webp" alt="" /></p>
+<p>插入排序的重要性质：</p>
+<p><img src="https://vip2.loli.io/2023/09/28/bGSQOE29R7pwWyY.webp" alt="" /></p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+// 插入排序函数
+void insertionSort(int arr[], int n) {
+    int i, j, key;
+    // 从数组的第二个元素开始遍历
+    for (i = 1; i &lt; n; i++) {
+        // 当前待排序的元素
+        key = arr[i];
+        // 找到 key 应该插入的位置
+        j = i - 1;
+        // 将比 key 大的元素向后移动
+        while (j &gt;= 0 &amp;&amp; arr[j] &gt; key) {
+            arr[j + 1] = arr[j];
+            j = j - 1;
+        }
+        // 将 key 插入到正确的位置
+        arr[j + 1] = key;
+    }
+}
+
+// 打印数组函数
+void printArray(int arr[], int n) {
+    for (int i = 0; i &lt; n; i++) {
+        printf(&quot;%d &quot;, arr[i]);
+    }
+    printf(&quot;\n&quot;);
+}
+
+int main() {
+    // 初始化一个待排序的数组
+    int arr[] = {12, 11, 13, 5, 6};
+    // 计算数组长度
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    // 打印原始数组
+    printf(&quot;Original array: \n&quot;);
+    printArray(arr, n);
+
+    // 进行插入排序
+    insertionSort(arr, n);
+
+    // 打印排序后的数组
+    printf(&quot;Sorted array: \n&quot;);
+    printArray(arr, n);
+
+    return 0;
+}
+</code></pre>
 
                     </main>
 
