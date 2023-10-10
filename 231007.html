@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>基础知识1.1~1.9(1) - 算法设计与分析学习笔记</title>
+        <title>基础知识2.1~2.7 - 算法设计与分析学习笔记</title>
 
 
         <!-- Custom HTML head -->
@@ -88,7 +88,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="230914.html" class="active"><strong aria-hidden="true">1.</strong> 基础知识1.1~1.9(1)</a></li><li class="chapter-item expanded "><a href="230921.html"><strong aria-hidden="true">2.</strong> 基础知识1.1~1.9(2)</a></li><li class="chapter-item expanded "><a href="230928.html"><strong aria-hidden="true">3.</strong> 国庆假期作业</a></li><li class="chapter-item expanded "><a href="231007.html"><strong aria-hidden="true">4.</strong> 基础知识2.1~2.7</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="230914.html"><strong aria-hidden="true">1.</strong> 基础知识1.1~1.9(1)</a></li><li class="chapter-item expanded "><a href="230921.html"><strong aria-hidden="true">2.</strong> 基础知识1.1~1.9(2)</a></li><li class="chapter-item expanded "><a href="230928.html"><strong aria-hidden="true">3.</strong> 国庆假期作业</a></li><li class="chapter-item expanded "><a href="231007.html" class="active"><strong aria-hidden="true">4.</strong> 基础知识2.1~2.7</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -171,119 +171,40 @@
 
                 <div id="content" class="content">
                     <main>
-                        <p>一、课程主要内容</p>
-<p><img src="https://vip2.loli.io/2023/09/14/UcAebSnJOHPa8RW.webp" alt="" /></p>
-<p>二、本节课的主要内容</p>
-<p><img src="https://vip2.loli.io/2023/09/14/2UX4wuavthDNZCH.webp" alt="" /></p>
-<p>三、算法设计的要点</p>
-<p><img src="https://vip2.loli.io/2023/09/14/pZVkQmdsGRbl4qH.webp" alt="" /></p>
-<p>四、本节课涉及的问题</p>
-<ul>
-<li>
-<p>货郎问题</p>
-</li>
-<li>
-<p>0-1背包问题</p>
-</li>
-<li>
-<p>双机调度问题</p>
-</li>
-<li>
-<p>NP-hard问题</p>
-</li>
-</ul>
-<p><img src="https://vip2.loli.io/2023/09/14/KvhwMZWxic8rBNl.webp" alt="" /></p>
-<ul>
-<li>.......</li>
-</ul>
-<p>五、货郎问题</p>
-<p>注：课后作业要用到。</p>
-<p><img src="https://vip2.loli.io/2023/09/14/6OYavZ2cfAJVETF.webp" alt="" /></p>
-<p><img src="https://vip2.loli.io/2023/09/14/Hr5cKaY2N8kLxUl.webp" alt="" /></p>
-<p>六：算法的两种时间复杂度</p>
-<p>最坏时间复杂度和平均时间复杂度。</p>
-<p><img src="https://vip2.loli.io/2023/09/14/ncWLdkXtU2B7g3I.webp" alt="" /></p>
-<p>七、算法的伪代码描述</p>
-<p><img src="https://vip2.loli.io/2023/09/14/f9LVUwrFC5PAgRN.webp" alt="" /></p>
-<p>八、函数的渐近的界</p>
-<ul>
-<li>大O符号（描述一个函数的“上界”）</li>
-</ul>
-<p><img src="https://vip2.loli.io/2023/09/14/Vck1Ew9dWMo8U7K.webp" alt="" /></p>
-<p><img src="https://vip2.loli.io/2023/09/14/6ro94VvIYeNq5ab.webp" alt="" /></p>
-<ul>
-<li>Ω符号（描述一个函数的“下界”）</li>
-</ul>
-<p><img src="https://vip2.loli.io/2023/09/14/9kjuNTpUiwW3AsQ.webp" alt="" /></p>
-<p><img src="https://vip2.loli.io/2023/09/14/DvLnB1jXyYFoZu4.webp" alt="" /></p>
-<ul>
-<li>小o符号（描述一个更“严格”的上界）</li>
-</ul>
-<p><img src="https://vip2.loli.io/2023/09/14/DyjFRrNfZsVnGci.webp" alt="" /></p>
-<p><img src="https://vip2.loli.io/2023/09/14/oq7ydfetbZ2pa5L.webp" alt="" /></p>
-<ul>
-<li>小w符号（描述一个更“严格”的下界）</li>
-</ul>
-<p><img src="https://vip2.loli.io/2023/09/14/3kuDgz8F1PWCISn.webp" alt="" /></p>
-<p>课后作业</p>
-<p>用python或java简单实现货郎问题(TSP,Traveling Salesman Problem)。</p>
-<p><img src="https://vip2.loli.io/2023/09/19/jmlkoYL5Hni7pPK.webp" alt="" /></p>
-<pre><code class="language-python">from itertools import permutations  # 导入排列函数
-
-# 定义城市和它们之间的距离
-cities = [&quot;c1&quot;, &quot;c2&quot;, &quot;c3&quot;, &quot;c4&quot;]
-distances = {
-    (&quot;c1&quot;, &quot;c2&quot;): 10,
-    (&quot;c1&quot;, &quot;c3&quot;): 5,
-    (&quot;c1&quot;, &quot;c4&quot;): 9,
-    (&quot;c2&quot;, &quot;c3&quot;): 6,
-    (&quot;c2&quot;, &quot;c4&quot;): 9,
-    (&quot;c3&quot;, &quot;c4&quot;): 3,
-}
-
-
-# 函数：计算给定路径的总距离
-def calculate_distance(path, distances):
-    total_distance = 0  # 初始化总距离为0
-    for i in range(len(path) - 1):  # 遍历路径中的每一对相邻城市
-        # 使用get方法从字典中提取城市对的距离，如果没有则尝试反向城市对
-        total_distance += distances.get(
-            (path[i], path[i + 1]), distances.get((path[i + 1], path[i]), 0)
-        )
-    return total_distance  # 返回总距离
-
-
-# 生成所有可能的路径（排列）
-all_paths = list(permutations(cities))
-
-# print(all_paths)
-# print(len(all_paths))
-
-# 寻找具有最小距离的路径
-min_distance = float(&quot;inf&quot;)  # 初始化最小距离为无穷大
-min_path = None  # 初始化最短路径为None
-
-# 遍历所有可能的路径
-for path in all_paths:
-    path_with_return = path + (path[0],)  # 在路径末尾添加起始城市，形成一个回路
-    distance = calculate_distance(path_with_return, distances)  # 计算回路的总距离
-    if distance &lt; min_distance:  # 如果找到更短的路径，则更新最小距离和最短路径
-        min_distance = distance
-        min_path = path_with_return
-
-# 输出最短路径和其总距离
-print(min_path, min_distance)
-</code></pre>
-<p><img src="https://vip2.loli.io/2023/09/14/4jUJ1REFGVXwDiz.webp" alt="" /></p>
+                        <p>一、估计和式上界的放大法</p>
+<p><img src="https://vip2.loli.io/2023/10/07/9Pwbd5BeKgnYNx8.webp" alt="" /></p>
+<p><img src="https://vip2.loli.io/2023/10/07/Fe6OcRN5tkQoBYa.webp" alt="" /></p>
+<p>二、估计和式渐近的界</p>
+<p><img src="https://vip2.loli.io/2023/10/10/vIqYH9EwR5ZXGBn.webp" alt="" /></p>
+<p>三、递推方程</p>
+<p><img src="https://vip2.loli.io/2023/10/08/uZBpOvzyRdcHP3w.webp" alt="" /></p>
+<p>四、迭代法求解递推方程</p>
+<p><img src="https://vip2.loli.io/2023/10/08/skRA1wnxT6j4zbO.webp" alt="" /></p>
+<p>换元迭代：</p>
+<p><img src="https://vip2.loli.io/2023/10/08/zQilIHXUyxbJAFo.webp" alt="" /></p>
+<p><img src="https://vip2.loli.io/2023/10/08/pQN2ubw7fo9qAWP.webp" alt="" /></p>
+<p>五、差消法化简高阶递推方程</p>
+<p><img src="https://vip2.loli.io/2023/10/08/DE7le4UTyStkKdM.webp" alt="" /></p>
+<p>六、递归树</p>
+<p>一种用于分析递归算法时间复杂度的工具。它将递归过程展现为一棵树，从而我们可以很直观地看到每个递归层级的运算量。</p>
+<p>七、主定理</p>
+<p><img src="https://vip2.loli.io/2023/10/08/7kz9HBWcAXSp5Cq.webp" alt="" /></p>
+<p><img src="https://vip2.loli.io/2023/10/08/nhPGlHZvkRtm7sN.webp" alt="" /></p>
+<p><img src="https://vip2.loli.io/2023/10/08/XxfuCA6r75LgD3J.webp" alt="" /></p>
+<p>八、GPT关于主定理的例子和解释</p>
+<p><img src="https://vip2.loli.io/2023/10/08/6uElqAiWzo9yTDj.webp" alt="" /></p>
+<p><img src="https://vip2.loli.io/2023/10/08/O7yHrFV4Rph3AnC.webp" alt="" /></p>
+<p>九、主定理求解递归式的好处</p>
+<p><img src="https://vip2.loli.io/2023/10/08/t1SaiH6lWqzoZDu.webp" alt="" /></p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-
-                            <a rel="next prefetch" href="230921.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
+                            <a rel="prev" href="230928.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
                             </a>
+
 
                         <div style="clear: both"></div>
                     </nav>
@@ -291,10 +212,10 @@ print(min_path, min_distance)
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-
-                    <a rel="next prefetch" href="230921.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
+                    <a rel="prev" href="230928.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
                     </a>
+
             </nav>
 
         </div>
