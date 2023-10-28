@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>基础知识2.1~2.7 - 算法设计与分析学习笔记</title>
+        <title>幂乘算法及其应用3.6~4.5选择问题的算法分析 - 算法设计与分析学习笔记</title>
 
 
         <!-- Custom HTML head -->
@@ -88,7 +88,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="230914.html"><strong aria-hidden="true">1.</strong> 基础知识1.1~1.9(1)</a></li><li class="chapter-item expanded "><a href="230921.html"><strong aria-hidden="true">2.</strong> 基础知识1.1~1.9(2)</a></li><li class="chapter-item expanded "><a href="230928.html"><strong aria-hidden="true">3.</strong> 国庆假期作业</a></li><li class="chapter-item expanded "><a href="231007.html" class="active"><strong aria-hidden="true">4.</strong> 基础知识2.1~2.7</a></li><li class="chapter-item expanded "><a href="231012.html"><strong aria-hidden="true">5.</strong> 基础知识2.8~分治策略3.5</a></li><li class="chapter-item expanded "><a href="231019.html"><strong aria-hidden="true">6.</strong> 幂乘算法及其应用3.6~4.5选择问题的算法分析</a></li><li class="chapter-item expanded "><a href="231026.html"><strong aria-hidden="true">7.</strong> 动态规划算法的例子5.2~动态规划算法的迭代实现5.5</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="230914.html"><strong aria-hidden="true">1.</strong> 基础知识1.1~1.9(1)</a></li><li class="chapter-item expanded "><a href="230921.html"><strong aria-hidden="true">2.</strong> 基础知识1.1~1.9(2)</a></li><li class="chapter-item expanded "><a href="230928.html"><strong aria-hidden="true">3.</strong> 国庆假期作业</a></li><li class="chapter-item expanded "><a href="231007.html"><strong aria-hidden="true">4.</strong> 基础知识2.1~2.7</a></li><li class="chapter-item expanded "><a href="231012.html"><strong aria-hidden="true">5.</strong> 基础知识2.8~分治策略3.5</a></li><li class="chapter-item expanded "><a href="231019.html" class="active"><strong aria-hidden="true">6.</strong> 幂乘算法及其应用3.6~4.5选择问题的算法分析</a></li><li class="chapter-item expanded "><a href="231026.html"><strong aria-hidden="true">7.</strong> 动态规划算法的例子5.2~动态规划算法的迭代实现5.5</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -171,41 +171,40 @@
 
                 <div id="content" class="content">
                     <main>
-                        <p>一、估计和式上界的放大法</p>
-<p><img src="https://vip2.loli.io/2023/10/07/9Pwbd5BeKgnYNx8.webp" alt="" /></p>
-<p><img src="https://vip2.loli.io/2023/10/07/Fe6OcRN5tkQoBYa.webp" alt="" /></p>
-<p>二、估计和式渐近的界</p>
-<p><img src="https://vip2.loli.io/2023/10/10/vIqYH9EwR5ZXGBn.webp" alt="" /></p>
-<p>三、递推方程</p>
-<p><img src="https://vip2.loli.io/2023/10/08/uZBpOvzyRdcHP3w.webp" alt="" /></p>
-<p>四、迭代法求解递推方程</p>
-<p><img src="https://vip2.loli.io/2023/10/08/skRA1wnxT6j4zbO.webp" alt="" /></p>
-<p>换元迭代：</p>
-<p><img src="https://vip2.loli.io/2023/10/08/zQilIHXUyxbJAFo.webp" alt="" /></p>
-<p><img src="https://vip2.loli.io/2023/10/08/pQN2ubw7fo9qAWP.webp" alt="" /></p>
-<p>五、差消法化简高阶递推方程</p>
-<p><img src="https://vip2.loli.io/2023/10/08/DE7le4UTyStkKdM.webp" alt="" /></p>
-<p>六、递归树</p>
-<p>一种用于分析递归算法时间复杂度的工具。它将递归过程展现为一棵树，从而我们可以很直观地看到每个递归层级的运算量。</p>
-<p>七、主定理</p>
-<p><img src="https://vip2.loli.io/2023/10/08/7kz9HBWcAXSp5Cq.webp" alt="" /></p>
-<p><img src="https://vip2.loli.io/2023/10/08/nhPGlHZvkRtm7sN.webp" alt="" /></p>
-<p><img src="https://vip2.loli.io/2023/10/08/XxfuCA6r75LgD3J.webp" alt="" /></p>
-<p>八、GPT关于主定理的例子和解释</p>
-<p><img src="https://vip2.loli.io/2023/10/08/6uElqAiWzo9yTDj.webp" alt="" /></p>
-<p><img src="https://vip2.loli.io/2023/10/08/O7yHrFV4Rph3AnC.webp" alt="" /></p>
-<p>九、主定理求解递归式的好处</p>
-<p><img src="https://vip2.loli.io/2023/10/08/t1SaiH6lWqzoZDu.webp" alt="" /></p>
+                        <p>一、斐波那契数列的性质</p>
+<p><img src="https://vip2.loli.io/2023/10/28/7ghJFMjiSAUnL1e.webp" alt="" /></p>
+<p>二、幂乘算法小结</p>
+<p><img src="https://vip2.loli.io/2023/10/28/Wj8o3mVGxeK4YOl.webp" alt="" /></p>
+<p>三、改进分治算法的途径1：减少子问题数</p>
+<p>减少子问题个数的依据</p>
+<p><img src="https://vip2.loli.io/2023/10/28/l7IU9jVBmAcRtb6.webp" alt="" /></p>
+<p>矩阵乘法的研究及应用和改进途径小结</p>
+<p><img src="https://vip2.loli.io/2023/10/28/mnljPagIMZ3CWbH.webp" alt="" /></p>
+<p>四、改进分治算法的途径2：增加预处理</p>
+<p><img src="https://vip2.loli.io/2023/10/28/BGQd6OYgEvNnVZC.webp" alt="" /></p>
+<p>五、选最大与最小</p>
+<p><img src="https://vip2.loli.io/2023/10/28/OCmDGcNixIYMAPz.webp" alt="" /></p>
+<p>六、选第二大</p>
+<p>选第二大提高效率的途径</p>
+<p><img src="https://vip2.loli.io/2023/10/28/sLKbzdv2ZOVSJ7A.webp" alt="" /></p>
+<p><img src="https://vip2.loli.io/2023/10/28/ltFGiwjcuVP8Kxr.webp" alt="" /></p>
+<p>七、一般选择问题的算法设计</p>
+<p>选择第k小的算法：</p>
+<p><img src="https://vip2.loli.io/2023/10/28/ihcISrPl7kAVyH6.webp" alt="" /></p>
+<p>八、选择问题的算法分析</p>
+<p><img src="https://vip2.loli.io/2023/10/28/5FBSqDaT1HAeyjV.webp" alt="" /></p>
+<p>九、为啥选择第k小的算法，采用分治方法，分组时5个元素一组？3个元素一组或7个一组行不行？</p>
+<p><img src="https://vip2.loli.io/2023/10/28/NTxsgO76tIh2pkJ.webp" alt="" /></p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="230928.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="231012.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="231012.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="231026.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -215,11 +214,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="230928.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="231012.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="231012.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="231026.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
