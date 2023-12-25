@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>基础知识2.8~分治策略3.5 - 算法设计与分析学习笔记</title>
+        <title>NP完全性 - 算法设计与分析学习笔记</title>
 
 
         <!-- Custom HTML head -->
@@ -88,7 +88,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="230914.html"><strong aria-hidden="true">1.</strong> 基础知识1.1~1.9(1)</a></li><li class="chapter-item expanded "><a href="230921.html"><strong aria-hidden="true">2.</strong> 基础知识1.1~1.9(2)</a></li><li class="chapter-item expanded "><a href="230928.html"><strong aria-hidden="true">3.</strong> 国庆假期作业</a></li><li class="chapter-item expanded "><a href="231007.html"><strong aria-hidden="true">4.</strong> 基础知识2.1~2.7</a></li><li class="chapter-item expanded "><a href="231012.html" class="active"><strong aria-hidden="true">5.</strong> 基础知识2.8~分治策略3.5</a></li><li class="chapter-item expanded "><a href="231019.html"><strong aria-hidden="true">6.</strong> 幂乘算法及其应用3.6~4.5选择问题的算法分析</a></li><li class="chapter-item expanded "><a href="231026.html"><strong aria-hidden="true">7.</strong> 动态规划算法的例子5.2~动态规划算法的迭代实现5.5</a></li><li class="chapter-item expanded "><a href="231030.html"><strong aria-hidden="true">8.</strong> 最长公共子序列5.8</a></li><li class="chapter-item expanded "><a href="231106.html"><strong aria-hidden="true">9.</strong> 两个问题</a></li><li class="chapter-item expanded "><a href="231113.html"><strong aria-hidden="true">10.</strong> 贪心法的设计思想4.1~对贪心法得不到最优解情况的处理4.3</a></li><li class="chapter-item expanded "><a href="231120.html"><strong aria-hidden="true">11.</strong> 贪心法</a></li><li class="chapter-item expanded "><a href="231128.html"><strong aria-hidden="true">12.</strong> 回溯算法</a></li><li class="chapter-item expanded "><a href="231204.html"><strong aria-hidden="true">13.</strong> 线性规划</a></li><li class="chapter-item expanded "><a href="231211.html"><strong aria-hidden="true">14.</strong> 网络流算法</a></li><li class="chapter-item expanded "><a href="231219.html"><strong aria-hidden="true">15.</strong> 算法分析与问题的计算复杂度</a></li><li class="chapter-item expanded "><a href="231225.html"><strong aria-hidden="true">16.</strong> NP完全性</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="230914.html"><strong aria-hidden="true">1.</strong> 基础知识1.1~1.9(1)</a></li><li class="chapter-item expanded "><a href="230921.html"><strong aria-hidden="true">2.</strong> 基础知识1.1~1.9(2)</a></li><li class="chapter-item expanded "><a href="230928.html"><strong aria-hidden="true">3.</strong> 国庆假期作业</a></li><li class="chapter-item expanded "><a href="231007.html"><strong aria-hidden="true">4.</strong> 基础知识2.1~2.7</a></li><li class="chapter-item expanded "><a href="231012.html"><strong aria-hidden="true">5.</strong> 基础知识2.8~分治策略3.5</a></li><li class="chapter-item expanded "><a href="231019.html"><strong aria-hidden="true">6.</strong> 幂乘算法及其应用3.6~4.5选择问题的算法分析</a></li><li class="chapter-item expanded "><a href="231026.html"><strong aria-hidden="true">7.</strong> 动态规划算法的例子5.2~动态规划算法的迭代实现5.5</a></li><li class="chapter-item expanded "><a href="231030.html"><strong aria-hidden="true">8.</strong> 最长公共子序列5.8</a></li><li class="chapter-item expanded "><a href="231106.html"><strong aria-hidden="true">9.</strong> 两个问题</a></li><li class="chapter-item expanded "><a href="231113.html"><strong aria-hidden="true">10.</strong> 贪心法的设计思想4.1~对贪心法得不到最优解情况的处理4.3</a></li><li class="chapter-item expanded "><a href="231120.html"><strong aria-hidden="true">11.</strong> 贪心法</a></li><li class="chapter-item expanded "><a href="231128.html"><strong aria-hidden="true">12.</strong> 回溯算法</a></li><li class="chapter-item expanded "><a href="231204.html"><strong aria-hidden="true">13.</strong> 线性规划</a></li><li class="chapter-item expanded "><a href="231211.html"><strong aria-hidden="true">14.</strong> 网络流算法</a></li><li class="chapter-item expanded "><a href="231219.html"><strong aria-hidden="true">15.</strong> 算法分析与问题的计算复杂度</a></li><li class="chapter-item expanded "><a href="231225.html" class="active"><strong aria-hidden="true">16.</strong> NP完全性</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -173,46 +173,37 @@
 
                 <div id="content" class="content">
                     <main>
-                        <p>一、无法使用主定理求解递推方程时，可以使用递归树求解。</p>
-<p>二、主定理求解递推方程的条件 &amp;&amp; 主定理什么时候可以用？</p>
-<p><img src="https://vip2.loli.io/2023/10/12/wZpLVH8nWqX47ze.webp" alt="" /></p>
-<p>三、大O符号表示小于等于</p>
-<p><img src="https://vip2.loli.io/2023/10/14/7yAYH6oLxsIVu1C.webp" alt="" /></p>
-<p>四、典型的分治算法</p>
-<p><img src="https://vip2.loli.io/2023/10/14/xiK1vgj4YECmZ5p.webp" alt="" /></p>
-<p>五、分治策略的基本思想</p>
-<p><img src="https://vip2.loli.io/2023/10/14/woxAJ9zUhXvnWqr.webp" alt="" /></p>
-<p>六、分治算法的特点</p>
-<p><img src="https://vip2.loli.io/2023/10/14/HEYmlfcwt9Fqzvb.webp" alt="" /></p>
-<p>七、两类常见的递推方程及其求解</p>
-<p><img src="https://vip2.loli.io/2023/10/14/DlFtM8VBULQve6r.webp" alt="" /></p>
-<p><img src="https://vip2.loli.io/2023/10/14/9UtqblXDnGPoTay.webp" alt="" /></p>
-<p>八、方程2的解</p>
-<p><img src="https://vip2.loli.io/2023/10/14/LPDqhsEI7ezTCOG.webp" alt="" /></p>
-<p>九、芯片测试的分治算法</p>
-<p><img src="https://vip2.loli.io/2023/10/14/Rs84zA63qNp1f2h.webp" alt="" /></p>
-<p>十、分治策略中的快速排序</p>
-<p><img src="https://vip2.loli.io/2023/10/14/adJFuRT7NPDjK8I.webp" alt="" /></p>
-<p>课后作业：习题一</p>
-<p><img src="https://vip2.loli.io/2023/10/14/FRMViTx5khH64uY.webp" alt="" /></p>
-<p><img src="https://vip2.loli.io/2023/10/14/Wa6gUkiXs4BlGwH.webp" alt="" /></p>
-<p><img src="https://vip2.loli.io/2023/10/14/tTYDrROXfjnFHyu.webp" alt="" /></p>
-<p><img src="https://vip2.loli.io/2023/10/14/ZbkQpPHwtJnE2go.webp" alt="" /></p>
-<p><img src="https://vip2.loli.io/2023/10/14/cbOHx7GihmLAzER.webp" alt="" /></p>
-<p><img src="https://vip2.loli.io/2023/10/14/rK7QhsocR8jbI9n.webp" alt="" /></p>
-<p><img src="https://vip2.loli.io/2023/10/14/KmjbzxU9CGtqrSL.webp" alt="" /></p>
+                        <p>1、课堂关键字</p>
+<ul>
+<li>NP完全性</li>
+</ul>
+<p>2、提及到的期末复习考察重点</p>
+<ul>
+<li>
+<p>分治问题</p>
+</li>
+<li>
+<p>动态规划，状态转移方程</p>
+</li>
+<li>
+<p>贪心算法</p>
+</li>
+<li>
+<p>时间复杂度</p>
+</li>
+<li>
+<p>6～9</p>
+</li>
+</ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="231007.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="231219.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="231019.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -220,13 +211,10 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="231007.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="231219.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="231019.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
             </nav>
 
         </div>
