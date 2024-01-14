@@ -46,11 +46,15 @@
 
 - [网络流算法学习笔记](note-7.md)
 
+- [算法分析和问题的计算复杂度学习笔记](note-8.md)
+
+- [NP完全性学习笔记](note-9.md)
+
+- [期末复习重点](final-exam-points.md)
+
 - [期末复习题（1）](final-exam-review1.md)
 
 - [期末复习题（2）](final-exam-review2.md)
-
-- [期末复习重点](final-exam-points.md)
 
 - [分治算法大题](final-exam-review3.md)
 
