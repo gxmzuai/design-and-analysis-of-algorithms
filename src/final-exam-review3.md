@@ -126,6 +126,8 @@ void QuickSort(int left, int right)
 
 ![](https://cdn.sa.net/2024/01/13/eCL89QaXdjTK2pc.webp)
 
+![](https://cdn.sa.net/2024/01/14/uXFowzOPse7MlKp.webp)
+
 
 3、题目： 使用分治法的 maxmin 算法寻找数组中的最大值和最小值
 
