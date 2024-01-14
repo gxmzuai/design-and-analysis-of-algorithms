@@ -34,11 +34,17 @@
 
 - [基础知识学习笔记](note-1.md)
 
+- [分治算法学习笔记](note-2.md)
+
 - [动态规划学习笔记](note-3.md)
 
 - [贪心法学习笔记](note-4.md)
 
+- [回溯法学习笔记](note-5.md)
+
 - [线性规划学习笔记](note-6.md)
+
+- [网络流算法学习笔记](note-7.md)
 
 - [期末复习题（1）](final-exam-review1.md)
 
@@ -46,4 +52,10 @@
 
 - [期末复习重点](final-exam-points.md)
 
-- [期末复习笔记（1）](final-exam-review3.md)
+- [分治算法大题](final-exam-review3.md)
+
+- [动态规划大题](final-exam-review4.md)
+
+- [贪心算法大题](final-exam-review5.md)
+
+- [回溯算法大题](final-exam-review6.md)
