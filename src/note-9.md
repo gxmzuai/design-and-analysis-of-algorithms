@@ -55,3 +55,10 @@ NP：所有多项式时间可验证的判定问题组成的问题类
 
 ![](https://cdn.sa.net/2024/01/11/XhLWDkJ8ZoMrBfC.webp)
 
+9、典型的NP完全问题：m着色问题、旅行商TSP问题。
+
+10、
+
+![](https://cdn.sa.net/2024/01/15/oQxgIf692pbKdmJ.webp)
+
+![](https://cdn.sa.net/2024/01/15/snQwlL3hjIpXHiR.webp)
