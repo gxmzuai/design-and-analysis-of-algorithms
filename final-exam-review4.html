@@ -492,7 +492,47 @@ int main() {
     return 0;
 }
 </code></pre>
+<p>5、</p>
+<p><img src="https://cdn.sa.net/2024/01/15/rA1N3g8JC6YlxwG.webp" alt="" /></p>
+<pre><code class="language-bash">解答：
+</code></pre>
+<p><img src="https://cdn.sa.net/2024/01/15/1FmPVvnx7wiRTQN.webp" alt="" /></p>
+<pre><code class="language-bash">2.时间复杂度、空间复杂度
+时间复杂度：我们需要计算L[i][j]对于每个i从1到n和每个j从1到y，所以时间复杂度为O（ny）。
+空间复杂度：由于我们需要存储一个大小为n*y的二维数组，因此空间复杂度也是(ny)。
 
+3.求解：
+表格的行代表了不同的硬币种类（vi 的值），列代表了我们要兑换的金额从O到y。
+每个单元格L[i,j]的值表示使用前i种硬币兑换金额j所需的最少硬币数量。
+
+第一行（v1）：仅使用面值为1的硬币时，兑换金额j所需的硬币数量直接等于金额本身（因为每枚硬币价值1）。
+
+第二行（v2）：现在我们引入面值为5的硬币。对于金额小于5的j，我们仍然只能使用面值为1的硬币，因此值不变。
+但对于j大于或等于5，我们可以开始使用面值为5的硬币。在这些情况下，L[2,j]的值可能会变小，
+因为使用面值为5的硬币可能会比仅使用面值为1的硬币需要更少的硬币数量。
+
+第三行（v3）：引入面值为7的硬币。同样的逻辑，对于金额j大于或等于7，我们考虑使用面值为7的硬币
+是否可以减少所需的硬币总数。如果可以，我们更新l[3,j]的值。
+
+第四行（v4）：最后，我们考虑面值为11的硬币。同之前的步骤，我们检查对于金额j
+大于或等于11的情况，是否使用面值为11的硬币可以减少硬币数量。
+
+每一次，我们都是在查找最小值：是否使用新的硬币种类会比不使用它需要更少的硬币数量。如果是的话，
+我们就更新那个金额的最少硬币数。
+
+L[4][15]的值为3，表示使用前四种硬币兑换金额为15需要的最少硬币数为3。
+最优解：
+3枚5元硬币
+2枚7元硬币+1枚1元硬币
+最优值：3
+</code></pre>
+<div class="table-wrapper"><table><thead><tr><th></th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th></tr></thead><tbody>
+<tr><td>v1</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr>
+<tr><td>v2</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>3</td></tr>
+<tr><td>v3</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>1</td><td>2</td><td>1</td><td>2</td><td>3</td><td>2</td><td>3</td><td>2</td><td>3</td><td>2</td><td>3</td></tr>
+<tr><td>v4</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>1</td><td>2</td><td>1</td><td>2</td><td>3</td><td>2</td><td>1</td><td>2</td><td>3</td><td>2</td><td>3</td></tr>
+</tbody></table>
+</div>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
