@@ -196,14 +196,7 @@
 <p><img src="https://cdn.sa.net/2024/01/16/oaFGLkdhYSe3qXV.webp" alt="" /></p>
 <p>3、解空间树绘制、最优解，最优值，含义解释</p>
 <p>4、动态规划问题-小民走迷宫</p>
-<p>$$
-dp[i][j] = \begin{cases} 
-a[i][j] &amp; \text{for } i = 0 \text{ and } j = 0 \
-dp[i][j] = dp[i][j-1] + a[i][j]; &amp; \text{for } i = 0  \text{ and } j \neq 0 \
-dp[i][j] = dp[i-1][j] + a[i][j]; &amp; \text{for } i \neq 0  \text{ and } j = 0 \
-\min(dp[i-1][j], dp[i][j-1]) + a[i][j] &amp; \text{for } i \neq 0 \text{ and } j \neq 0 
-\end{cases}
-$$</p>
+<p><img src="https://cdn.sa.net/2024/01/16/mVCKXEzOPdrN2uf.webp" alt="" /></p>
 <pre><code class="language-cpp">int minPathForDP(){
     // 边界情况
     dp[0][0] = a[0][0];
