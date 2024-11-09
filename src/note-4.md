@@ -8,7 +8,7 @@
 
 3、贪心算法的特点：
 
-![](https://img.gujiakai.cn/i/2024/01/10/qhf7io-0.webp)
+![](https://image.gujiakai.top/i/2024/01/10/qhf7io-0.webp)
 
 4、贪心算法的三个性质
 
@@ -32,24 +32,24 @@ b.这是贪心算法与动态规划算法的主要区别
 
 6、背包问题课后习题
 
-![](https://img.gujiakai.cn/i/2024/01/10/qvmes3-0.webp)
+![](https://image.gujiakai.top/i/2024/01/10/qvmes3-0.webp)
 
-![](https://img.gujiakai.cn/i/2024/01/10/qw2w7n-0.webp)
+![](https://image.gujiakai.top/i/2024/01/10/qw2w7n-0.webp)
 
 7、基本要素课后习题
 
-![](https://img.gujiakai.cn/i/2024/01/10/qwcvzi-0.webp)
+![](https://image.gujiakai.top/i/2024/01/10/qwcvzi-0.webp)
 
-![](https://img.gujiakai.cn/i/2024/01/10/qwozri-0.webp)
+![](https://image.gujiakai.top/i/2024/01/10/qwozri-0.webp)
 
 8、MST课后习题
 
-![](https://img.gujiakai.cn/i/2024/01/10/qwyig2-0.webp)
+![](https://image.gujiakai.top/i/2024/01/10/qwyig2-0.webp)
 
-![](https://img.gujiakai.cn/i/2024/01/10/qxbpkl-0.webp)
+![](https://image.gujiakai.top/i/2024/01/10/qxbpkl-0.webp)
 
 9、哈夫曼编码课后习题
 
-![](https://img.gujiakai.cn/i/2024/01/10/qxksa2-0.webp)
+![](https://image.gujiakai.top/i/2024/01/10/qxksa2-0.webp)
 
-![](https://img.gujiakai.cn/i/2024/01/10/qxx4fa-0.webp)
+![](https://image.gujiakai.top/i/2024/01/10/qxx4fa-0.webp)
