@@ -72,21 +72,21 @@ b.限界函数剪去得不到最优解的子树
 
 8、装载问题的课后习题
 
-![](https://img.gujiakai.cn/i/2024/01/10/k3k8s8-0.webp)
+![](https://image.gujiakai.top/i/2024/01/10/k3k8s8-0.webp)
 
-![](https://img.gujiakai.cn/i/2024/01/10/k3oot8-0.webp)
+![](https://image.gujiakai.top/i/2024/01/10/k3oot8-0.webp)
 
 9、TSP问题的课后习题答案
 
-![](https://img.gujiakai.cn/i/2024/01/10/k453ke-0.webp)
+![](https://image.gujiakai.top/i/2024/01/10/k453ke-0.webp)
 
-![](https://img.gujiakai.cn/i/2024/01/10/k4acct-0.webp)
+![](https://image.gujiakai.top/i/2024/01/10/k4acct-0.webp)
 
 10、基本特征的课后习题答案
 
-![](https://img.gujiakai.cn/i/2024/01/10/k4q4ne-0.webp)
+![](https://image.gujiakai.top/i/2024/01/10/k4q4ne-0.webp)
 
-![](https://img.gujiakai.cn/i/2024/01/10/k4va2l-0.webp)
+![](https://image.gujiakai.top/i/2024/01/10/k4va2l-0.webp)
 
 11、
 
