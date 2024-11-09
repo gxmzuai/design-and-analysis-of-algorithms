@@ -14,7 +14,7 @@
 
 3、分治法的适用条件
 
-![](https://img.gujiakai.cn/i/2024/01/10/r3f1wz-0.webp)
+![](https://image.gujiakai.top/i/2024/01/10/r3f1wz-0.webp)
 
 4、分治算法的改进方法
 
@@ -26,9 +26,9 @@
 
 5、分治算法选择题
 
-![](https://img.gujiakai.cn/i/2024/01/10/rb432m-0.webp)
+![](https://image.gujiakai.top/i/2024/01/10/rb432m-0.webp)
 
-![](https://img.gujiakai.cn/i/2024/01/10/rb9nfr-0.webp)
+![](https://image.gujiakai.top/i/2024/01/10/rb9nfr-0.webp)
 
 解析：
 
