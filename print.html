@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" class="light" dir="ltr">
+<html lang="en" class="light sidebar-visible" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -8,7 +8,7 @@
 
 
         <!-- Custom HTML head -->
-        
+
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
@@ -31,15 +31,17 @@
 
         <!-- Custom theme stylesheets -->
 
-    </head>
-    <body class="sidebar-visible no-js">
-    <div id="body-container">
+
         <!-- Provide site root to javascript -->
         <script>
             var path_to_root = "";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
-
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script>
             try {
@@ -61,19 +63,16 @@
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
-            var html = document.querySelector('html');
+            const html = document.documentElement;
             html.classList.remove('light')
             html.classList.add(theme);
-            var body = document.querySelector('body');
-            body.classList.remove('no-js')
-            body.classList.add('js');
+            html.classList.add("js");
         </script>
 
         <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
-            var body = document.querySelector('body');
             var sidebar = null;
             var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
@@ -83,45 +82,25 @@
                 sidebar = 'hidden';
             }
             sidebar_toggle.checked = sidebar === 'visible';
-            body.classList.remove('sidebar-visible');
-            body.classList.add("sidebar-" + sidebar);
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="230914.html"><strong aria-hidden="true">1.</strong> 基础知识1.1~1.9(1)</a></li><li class="chapter-item expanded "><a href="230921.html"><strong aria-hidden="true">2.</strong> 基础知识1.1~1.9(2)</a></li><li class="chapter-item expanded "><a href="230928.html"><strong aria-hidden="true">3.</strong> 国庆假期作业</a></li><li class="chapter-item expanded "><a href="231007.html"><strong aria-hidden="true">4.</strong> 基础知识2.1~2.7</a></li><li class="chapter-item expanded "><a href="231012.html"><strong aria-hidden="true">5.</strong> 基础知识2.8~分治策略3.5</a></li><li class="chapter-item expanded "><a href="231019.html"><strong aria-hidden="true">6.</strong> 幂乘算法及其应用3.6~4.5选择问题的算法分析</a></li><li class="chapter-item expanded "><a href="231026.html"><strong aria-hidden="true">7.</strong> 动态规划算法的例子5.2~动态规划算法的迭代实现5.5</a></li><li class="chapter-item expanded "><a href="231030.html"><strong aria-hidden="true">8.</strong> 最长公共子序列5.8</a></li><li class="chapter-item expanded "><a href="231106.html"><strong aria-hidden="true">9.</strong> 两个问题</a></li><li class="chapter-item expanded "><a href="231113.html"><strong aria-hidden="true">10.</strong> 贪心法的设计思想4.1~对贪心法得不到最优解情况的处理4.3</a></li><li class="chapter-item expanded "><a href="231120.html"><strong aria-hidden="true">11.</strong> 贪心法</a></li><li class="chapter-item expanded "><a href="231128.html"><strong aria-hidden="true">12.</strong> 回溯算法</a></li><li class="chapter-item expanded "><a href="231204.html"><strong aria-hidden="true">13.</strong> 线性规划</a></li><li class="chapter-item expanded "><a href="231211.html"><strong aria-hidden="true">14.</strong> 网络流算法</a></li><li class="chapter-item expanded "><a href="231219.html"><strong aria-hidden="true">15.</strong> 算法分析与问题的计算复杂度</a></li><li class="chapter-item expanded "><a href="231225.html"><strong aria-hidden="true">16.</strong> NP完全性</a></li><li class="chapter-item expanded "><a href="note-1.html"><strong aria-hidden="true">17.</strong> 基础知识学习笔记</a></li><li class="chapter-item expanded "><a href="note-2.html"><strong aria-hidden="true">18.</strong> 分治算法学习笔记</a></li><li class="chapter-item expanded "><a href="note-3.html"><strong aria-hidden="true">19.</strong> 动态规划学习笔记</a></li><li class="chapter-item expanded "><a href="note-4.html"><strong aria-hidden="true">20.</strong> 贪心法学习笔记</a></li><li class="chapter-item expanded "><a href="note-5.html"><strong aria-hidden="true">21.</strong> 回溯法学习笔记</a></li><li class="chapter-item expanded "><a href="note-6.html"><strong aria-hidden="true">22.</strong> 线性规划学习笔记</a></li><li class="chapter-item expanded "><a href="note-7.html"><strong aria-hidden="true">23.</strong> 网络流算法学习笔记</a></li><li class="chapter-item expanded "><a href="note-8.html"><strong aria-hidden="true">24.</strong> 算法分析和问题的计算复杂度学习笔记</a></li><li class="chapter-item expanded "><a href="note-9.html"><strong aria-hidden="true">25.</strong> NP完全性学习笔记</a></li><li class="chapter-item expanded "><a href="final-exam-points.html"><strong aria-hidden="true">26.</strong> 期末复习重点</a></li><li class="chapter-item expanded "><a href="final-exam-review1.html"><strong aria-hidden="true">27.</strong> 期末复习题（1）</a></li><li class="chapter-item expanded "><a href="final-exam-review2.html"><strong aria-hidden="true">28.</strong> 期末复习题（2）</a></li><li class="chapter-item expanded "><a href="final-exam-review3.html"><strong aria-hidden="true">29.</strong> 分治算法大题</a></li><li class="chapter-item expanded "><a href="final-exam-review4.html"><strong aria-hidden="true">30.</strong> 动态规划大题</a></li><li class="chapter-item expanded "><a href="final-exam-review5.html"><strong aria-hidden="true">31.</strong> 贪心算法大题</a></li><li class="chapter-item expanded "><a href="final-exam-review6.html"><strong aria-hidden="true">32.</strong> 回溯算法大题</a></li><li class="chapter-item expanded "><a href="240115.html"><strong aria-hidden="true">33.</strong> 期末考试回顾</a></li></ol>
-            </div>
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
             </div>
         </nav>
 
-        <!-- Track and set sidebar scroll position -->
-        <script>
-            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
-            sidebarScrollbox.addEventListener('click', function(e) {
-                if (e.target.tagName === 'A') {
-                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
-                }
-            }, { passive: true });
-            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
-            sessionStorage.removeItem('sidebar-scroll');
-            if (sidebarScrollTop) {
-                // preserve sidebar scroll position when navigating via links within sidebar
-                sidebarScrollbox.scrollTop = sidebarScrollTop;
-            } else {
-                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
-                var activeSection = document.querySelector('#sidebar .active');
-                if (activeSection) {
-                    activeSection.scrollIntoView({ block: 'center' });
-                }
-            }
-        </script>
-
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
                         <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
@@ -234,14 +213,14 @@
 <pre><code class="language-python">from itertools import permutations  # 导入排列函数
 
 # 定义城市和它们之间的距离
-cities = [&quot;c1&quot;, &quot;c2&quot;, &quot;c3&quot;, &quot;c4&quot;]
+cities = ["c1", "c2", "c3", "c4"]
 distances = {
-    (&quot;c1&quot;, &quot;c2&quot;): 10,
-    (&quot;c1&quot;, &quot;c3&quot;): 5,
-    (&quot;c1&quot;, &quot;c4&quot;): 9,
-    (&quot;c2&quot;, &quot;c3&quot;): 6,
-    (&quot;c2&quot;, &quot;c4&quot;): 9,
-    (&quot;c3&quot;, &quot;c4&quot;): 3,
+    ("c1", "c2"): 10,
+    ("c1", "c3"): 5,
+    ("c1", "c4"): 9,
+    ("c2", "c3"): 6,
+    ("c2", "c4"): 9,
+    ("c3", "c4"): 3,
 }
 
 
@@ -263,7 +242,7 @@ all_paths = list(permutations(cities))
 # print(len(all_paths))
 
 # 寻找具有最小距离的路径
-min_distance = float(&quot;inf&quot;)  # 初始化最小距离为无穷大
+min_distance = float("inf")  # 初始化最小距离为无穷大
 min_path = None  # 初始化最短路径为None
 
 # 遍历所有可能的路径
@@ -327,13 +306,13 @@ print(min_path, min_distance)
 void hanoi(int n, char A, char B, char C) {
     // 当只有一个盘子时，直接从 A 移动到 C
     if (n == 1) {
-        printf(&quot;Move disk 1 from %c to %c\n&quot;, A, C);
+        printf("Move disk 1 from %c to %c\n", A, C);
         return;
     }
     // 先将 n-1 个盘子从 A 移动到 B，以 C 作为中间塔
     hanoi(n-1, A, C, B);
     // 移动第 n 个盘子从 A 到 C
-    printf(&quot;Move disk %d from %c to %c\n&quot;, n, A, C);
+    printf("Move disk %d from %c to %c\n", n, A, C);
     // 最后将 n-1 个盘子从 B 移动到 C，以 A 作为中间塔
     hanoi(n-1, B, A, C);
 }
@@ -342,7 +321,7 @@ int main() {
     // 初始化盘子数量为 3
     int n = 3;
     // 输出汉诺塔移动步骤
-    printf(&quot;Hanoi Tower moves:\n&quot;);
+    printf("Hanoi Tower moves:\n");
     // 调用 hanoi 函数进行汉诺塔问题求解
     hanoi(n, 'A', 'B', 'C');
     return 0;
@@ -376,9 +355,9 @@ void insertionSort(int arr[], int n) {
 // 打印数组函数
 void printArray(int arr[], int n) {
     for (int i = 0; i &lt; n; i++) {
-        printf(&quot;%d &quot;, arr[i]);
+        printf("%d ", arr[i]);
     }
-    printf(&quot;\n&quot;);
+    printf("\n");
 }
 
 int main() {
@@ -388,14 +367,14 @@ int main() {
     int n = sizeof(arr) / sizeof(arr[0]);
 
     // 打印原始数组
-    printf(&quot;Original array: \n&quot;);
+    printf("Original array: \n");
     printArray(arr, n);
 
     // 进行插入排序
     insertionSort(arr, n);
 
     // 打印排序后的数组
-    printf(&quot;Sorted array: \n&quot;);
+    printf("Sorted array: \n");
     printArray(arr, n);
 
     return 0;
@@ -678,7 +657,7 @@ int main() {
 <p><strong>3、主定理</strong></p>
 <p><img src="https://cdn.sa.net/2023/12/26/T7s3uQbJWwFvcLa.webp" alt="" /></p>
 <p>4、指数函数的阶高于多项式函数的阶，而多项式函数的阶高于对数函数的阶。</p>
-<p>5、在没有明确说明的情况下，算法课程中的 &quot;log n&quot; 通常意味着二进制对数。</p>
+<p>5、在没有明确说明的情况下，算法课程中的 "log n" 通常意味着二进制对数。</p>
 <p>6、在使用主定理（Master Theorem）来分析递归算法的时间复杂度时，我们关注的是当问题规模n趋向于无穷大时，时间复杂度 T(n)的渐近行为。</p>
 <p>7、递推方程不满足主定理的条件，可以使用递归树求解。</p>
 <p>8、在递归算法的时间复杂度分析中常常用到主定理，其中a代表递归调用所产生的字问题个数，n/b代表这些字问题的规模，f(n)则代表调用前的操作及调用后把子问题的解组合成原问题的解的总工作量。</p>
@@ -755,7 +734,7 @@ int main() {
 <p>2、动态规划入门思路：dfs暴力—&gt;记忆化搜索—&gt;动态规划（递推）</p>
 <p>3、递归的过程：“归”的过程才是产生答案的过程，“递”的过程是 分解子问题的过程。</p>
 <p>4、</p>
-<p>“递&quot;--&gt; 自顶向下</p>
+<p>“递"--&gt; 自顶向下</p>
 <p>“归”--&gt; 自底向上</p>
 <p>5、递归搜索树的底是已知最小子问题的答案。</p>
 <p>6、</p>
@@ -999,22 +978,22 @@ D.以上都不是
 <p>1、网络</p>
 <p>2、最大流最小割定理</p>
 <p>3、最大流FF(Ford-Fulkerson算法)</p>
-<p><img src="https://img.gujiakai.cn/i/2024/01/10/p1hdcq-0.webp" alt="" /></p>
+<p><img src="https://image.gujiakai.top/i/2024/01/10/p1hdcq-0.webp" alt="" /></p>
 <p>4、Edmonds-Karp 算法</p>
 <p>Ford-Fulkerson 算法的特例。</p>
-<p><img src="https://img.gujiakai.cn/i/2024/01/10/pa1riw-0.webp" alt="" /></p>
+<p><img src="https://image.gujiakai.top/i/2024/01/10/pa1riw-0.webp" alt="" /></p>
 <p>5、Dinic算法</p>
-<p><img src="https://img.gujiakai.cn/i/2024/01/10/peiqcm-0.webp" alt="" /></p>
-<p><img src="https://img.gujiakai.cn/i/2024/01/10/pemsfj-0.webp" alt="" /></p>
+<p><img src="https://image.gujiakai.top/i/2024/01/10/peiqcm-0.webp" alt="" /></p>
+<p><img src="https://image.gujiakai.top/i/2024/01/10/pemsfj-0.webp" alt="" /></p>
 <p>6、阻塞流</p>
-<p><img src="https://img.gujiakai.cn/i/2024/01/10/pi6bop-0.webp" alt="" /></p>
+<p><img src="https://image.gujiakai.top/i/2024/01/10/pi6bop-0.webp" alt="" /></p>
 <p>7、最大流和最小割的值相等。</p>
 <p>8、最大流、最小割选择题</p>
-<p><img src="https://img.gujiakai.cn/i/2024/01/10/po6d83-0.webp" alt="" /></p>
-<p><img src="https://img.gujiakai.cn/i/2024/01/10/pocvfo-0.webp" alt="" /></p>
+<p><img src="https://image.gujiakai.top/i/2024/01/10/po6d83-0.webp" alt="" /></p>
+<p><img src="https://image.gujiakai.top/i/2024/01/10/pocvfo-0.webp" alt="" /></p>
 <p>9、最大流算法选择题</p>
-<p><img src="https://img.gujiakai.cn/i/2024/01/10/ppdbq9-0.webp" alt="" /></p>
-<p><img src="https://img.gujiakai.cn/i/2024/01/10/ppjvf1-0.webp" alt="" /></p>
+<p><img src="https://image.gujiakai.top/i/2024/01/10/ppdbq9-0.webp" alt="" /></p>
+<p><img src="https://image.gujiakai.top/i/2024/01/10/ppjvf1-0.webp" alt="" /></p>
 <p>10、割的容量计算的是流入边，不是流出边。</p>
 <p>11、</p>
 <pre><code class="language-bash">1、在最大流问题中，哪种算法是用来寻找增广路径的？
@@ -1971,11 +1950,11 @@ long long fibonacci(int n) {
 
 int main() {
     int n;
-    printf(&quot;请输入要计算的斐波那契数列项数：&quot;);
-    scanf(&quot;%d&quot;, &amp;n);
+    printf("请输入要计算的斐波那契数列项数：");
+    scanf("%d", &amp;n);
 
     long long result = fibonacci(n);
-    printf(&quot;斐波那契数列的第%d项是：%lld\n&quot;, n, result);
+    printf("斐波那契数列的第%d项是：%lld\n", n, result);
 
     return 0;
 }
@@ -2166,10 +2145,10 @@ int lcs(char *A, char *B) {
 }
 
 int main() {
-    char A[] = &quot;ABCBDAB&quot;;
-    char B[] = &quot;BDCABC&quot;;
+    char A[] = "ABCBDAB";
+    char B[] = "BDCABC";
 
-    printf(&quot;Length of LCS is %d\n&quot;, lcs(A, B));
+    printf("Length of LCS is %d\n", lcs(A, B));
     return 0;
 }
 </code></pre>
@@ -2227,13 +2206,13 @@ int climbStairs(int n) {
 
 int main() {
     int n;
-    printf(&quot;Enter the number of stairs (up to 10): &quot;);
-    scanf(&quot;%d&quot;, &amp;n);
+    printf("Enter the number of stairs (up to 10): ");
+    scanf("%d", &amp;n);
 
     if (n &gt; 0 &amp;&amp; n &lt;= 10) {
-        printf(&quot;Number of ways to climb %d stairs: %d\n&quot;, n, climbStairs(n));
+        printf("Number of ways to climb %d stairs: %d\n", n, climbStairs(n));
     } else {
-        printf(&quot;Invalid number of stairs. Please enter a number from 1 to 10.\n&quot;);
+        printf("Invalid number of stairs. Please enter a number from 1 to 10.\n");
     }
     
     return 0;
@@ -2313,7 +2292,7 @@ int main() {
     int wt[] = {10, 15, 6, 9}; // 物品的重量
     int W = 32; // 背包的最大载重
     int n = sizeof(val) / sizeof(val[0]); // 物品的数量
-    printf(&quot;最大收益是 %d\n&quot;, knapsack(W, wt, val, n));
+    printf("最大收益是 %d\n", knapsack(W, wt, val, n));
     return 0;
 }
 </code></pre>
@@ -2401,7 +2380,7 @@ int main() {
         }
     }
 
-    printf(&quot;最大收益: %d\n&quot;, dp[4][5]);
+    printf("最大收益: %d\n", dp[4][5]);
     return 0;
 }
 </code></pre>
